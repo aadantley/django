@@ -27,6 +27,7 @@ class Post(models.Model):
 
     class Meta:
         ordering = ('-published_date',)
+        default_manager_name = 'objects'
 
     def __str__(self):
         return self.title + ' - ' + str(self.author.first_name) + ' ' + str(self.author.last_name)
